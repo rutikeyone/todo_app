@@ -1,0 +1,48 @@
+name: todo_app
+description: "TODO app."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  bloc: ^9.0.0
+  flutter_bloc: ^9.1.1
+  formz: ^0.8.0
+  firebase_core: ^3.13.0
+  firebase_auth: ^5.5.3
+  cloud_firestore: ^5.6.7
+  go_router: ^15.1.1
+  dio: ^5.8.0+1
+  provider: ^6.1.5
+  intl: ^0.19.0
+  freezed_annotation: ^3.0.0
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.15
+  freezed: ^3.0.6
+  json_serializable: ^6.9.5
+
+flutter:
+
+  uses-material-design: true
+
+flutter_intl:
+  main_locale: ru
+  enabled: true
+

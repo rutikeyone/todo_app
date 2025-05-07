@@ -1,0 +1,18 @@
+{
+  "authorization": "Авторизация",
+  "email": "Почта",
+  "register": "Зарегистрироваться",
+  "login": "Войти",
+  "password": "Пароль",
+  "back": "Назад",
+  "cannot_be_empty": "Значение не может быть пустым",
+  "password_must_be_more_that_eight_length": "Пароль должен быть больше 8 символов",
+  "email_incorrect_message": "Значение для почты некорретное",
+  "email_invalid_message": "Значение ",
+  "add_todo": "Добавить заметку",
+  "header": "Заголовок",
+  "enter_your_header": "Введите ваш заголовок",
+  "description": "Описание",
+  "enter_your_description": "Введите ваше описание",
+  "to_save": "Сохранить"
+}
