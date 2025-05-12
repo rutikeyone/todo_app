@@ -29,4 +29,9 @@ class AuthDataSourceImpl implements AuthDataSource {
   Future<void> registerWithEmailAndPassword(String email, String password) {
     return _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
   }
+
+  @override
+  Future<void> signOut() {
+    return _firebaseAuth.signOut();
+  }
 }

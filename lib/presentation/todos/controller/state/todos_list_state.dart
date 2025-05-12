@@ -1,8 +1,12 @@
 part of 'state.dart';
 
 @freezed
-class TodosListState with _$TodosListState {
+abstract class TodosListState with _$TodosListState {
   const TodosListState._();
 
-  const factory TodosListState() = _TodosListState;
+  const factory TodosListState({
+    @Default([]) List<TodoModel> todos,
+    @Default(ProcessState.initial()) ProcessState deleteTodoState,
+    @Default(ProcessState.initial()) ProcessState updateTodoState,
+  }) = _TodosListState;
 }

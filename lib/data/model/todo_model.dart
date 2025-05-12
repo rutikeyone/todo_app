@@ -8,8 +8,8 @@ abstract class TodoModel with _$TodoModel {
     required String? id,
     required String? title,
     required String? note,
+    required bool? isCompleted,
   }) = _TodoModel;
 
-  factory TodoModel.fromJson(Map<String, dynamic> json) =>
-      _$TodoModelFromJson(json);
+  factory TodoModel.fromJson(Map<String, dynamic> json) => _$TodoModelFromJson(json);
 }

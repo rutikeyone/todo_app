@@ -1,4 +1,3 @@
-import "package:firebase_auth/firebase_auth.dart";
 import "package:go_router/go_router.dart";
 import "package:todo_app/app/navigation/app_screens.dart";
 import "package:todo_app/app/navigation/refresh_stream_adapter.dart";
@@ -7,6 +6,7 @@ import "package:todo_app/presentation/auth/login_page.dart";
 import "package:todo_app/presentation/auth/register_page.dart";
 import "package:todo_app/presentation/todos/add_todo_page.dart";
 import "package:todo_app/presentation/todos/todos_list_page.dart";
+import "package:todo_app/presentation/todos/update_todo_page.dart";
 
 GoRouter router(AuthRepository authRepository) {
   return GoRouter(
@@ -15,8 +15,7 @@ GoRouter router(AuthRepository authRepository) {
     redirect: (context, state) {
       final fullPath = state.uri.path;
       final isAuthenticated = authRepository.isAuthenticated();
-      final isAuthPath =
-          fullPath.startsWith(AppScreens.login.routePath) == true;
+      final isAuthPath = fullPath.startsWith(AppScreens.login.routePath) == true;
 
       if (!isAuthenticated && !isAuthPath) {
         return AppScreens.login.routePath;
@@ -55,6 +54,15 @@ GoRouter router(AuthRepository authRepository) {
             name: AppScreens.todosList.addTodo.routeName,
             builder: (context, state) {
               return AddTodoPage();
+            },
+          ),
+          GoRoute(
+            path: AppScreens.todosList.updateTodo.routePath,
+            name: AppScreens.todosList.updateTodo.routeName,
+            builder: (context, state) {
+              final arguments = AppScreens.todosList.updateTodo.withUpdateTodoArguments(state.uri.queryParameters);
+
+              return UpdateTodoPage(arguments: arguments);
             },
           ),
         ],

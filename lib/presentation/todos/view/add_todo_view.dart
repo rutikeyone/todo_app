@@ -7,7 +7,9 @@ import 'package:todo_app/presentation/todos/controller/add_todo_cubit.dart';
 import 'package:todo_app/presentation/todos/controller/state/state.dart';
 
 part '../widget/add_todo_note_input.dart';
+
 part '../widget/add_todo_header_input.dart';
+
 part '../widget/add_todo_button.dart';
 
 class AddTodoView extends StatelessWidget {
@@ -19,18 +21,21 @@ class AddTodoView extends StatelessWidget {
     if (addState is ProcessErrorState) {
       final message = addState.e.toString();
 
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text(message)));
+      final snackBar = SnackBar(content: Text(message)); 
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
     } else if (addState is ProcessSuccessState) {
       if (!context.mounted) return;
+
+      final message = S.of(context).note_has_been_added_successful;
+      final snackBar = SnackBar(content: Text(message));
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      
       context.pop();
     }
   }
 
   bool _listenWhen(AddTodoState previous, AddTodoState current) {
-    return current.addState is ProcessErrorState ||
-        current.addState is ProcessSuccessState;
+    return current.addState is ProcessErrorState || current.addState is ProcessSuccessState;
   }
 
   @override

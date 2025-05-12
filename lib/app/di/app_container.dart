@@ -16,6 +16,7 @@ import 'package:todo_app/presentation/auth/controller/login_cubit.dart';
 import 'package:todo_app/presentation/auth/controller/register_cubit.dart';
 import 'package:todo_app/presentation/todos/controller/add_todo_cubit.dart';
 import 'package:todo_app/presentation/todos/controller/todos_list_cubit.dart';
+import 'package:todo_app/presentation/todos/controller/update_todo_cubit.dart';
 import 'package:uuid/uuid.dart';
 
 class AppContainer {
@@ -74,10 +75,20 @@ class AppContainer {
   }
 
   TodosListCubit createTodosListCubit() {
-    return TodosListCubit();
+    return TodosListCubit(
+      todosRepository: createTodosRepository(),
+      authRepository: createAuthRepository(),
+    );
   }
 
   AddTodoCubit createAddTodoCubit() {
     return AddTodoCubit(todosRepository: createTodosRepository());
+  }
+
+  UpdateTodoCubit createUpdateTodoCubit(String todoId) {
+    return UpdateTodoCubit(
+      todoId: todoId,
+      todosRepository: createTodosRepository(),
+    )..loadData();
   }
 }

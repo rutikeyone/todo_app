@@ -179,6 +179,56 @@ class S {
   String get to_save {
     return Intl.message('Сохранить', name: 'to_save', desc: '', args: []);
   }
+
+  /// `Запись была успешно добавлена`
+  String get note_has_been_added_successful {
+    return Intl.message(
+      'Запись была успешно добавлена',
+      name: 'note_has_been_added_successful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Список TODOs`
+  String get todos_list {
+    return Intl.message('Список TODOs', name: 'todos_list', desc: '', args: []);
+  }
+
+  /// `Список элементов пустой`
+  String get the_list_of_elements_is_empty {
+    return Intl.message(
+      'Список элементов пустой',
+      name: 'the_list_of_elements_is_empty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Изменить ToDo`
+  String get update_todo {
+    return Intl.message(
+      'Изменить ToDo',
+      name: 'update_todo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Завершен`
+  String get completed {
+    return Intl.message('Завершен', name: 'completed', desc: '', args: []);
+  }
+
+  /// `Данные успешно изменены`
+  String get data_has_been_updated_successfully {
+    return Intl.message(
+      'Данные успешно изменены',
+      name: 'data_has_been_updated_successfully',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -9,10 +9,9 @@ class _AddTodoButton extends StatelessWidget {
       buildWhen:
           (previous, current) => previous.canAddTodo != current.canAddTodo,
       builder: (context, state) {
-        final canAddTodo = state.canAddTodo;
 
         return Padding(
-          padding: const EdgeInsets.only(top: 16),
+          padding: const EdgeInsets.only(top: 32),
           child: ElevatedButton(
             onPressed:
                 state.canAddTodo ? context.read<AddTodoCubit>().addTodo : null,

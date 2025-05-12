@@ -28,6 +28,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "cannot_be_empty": MessageLookupByLibrary.simpleMessage(
       "Значение не может быть пустым",
     ),
+    "completed": MessageLookupByLibrary.simpleMessage("Завершен"),
+    "data_has_been_updated_successfully": MessageLookupByLibrary.simpleMessage(
+      "Данные успешно изменены",
+    ),
     "description": MessageLookupByLibrary.simpleMessage("Описание"),
     "email": MessageLookupByLibrary.simpleMessage("Почта"),
     "email_incorrect_message": MessageLookupByLibrary.simpleMessage(
@@ -42,12 +46,20 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "header": MessageLookupByLibrary.simpleMessage("Заголовок"),
     "login": MessageLookupByLibrary.simpleMessage("Войти"),
+    "note_has_been_added_successful": MessageLookupByLibrary.simpleMessage(
+      "Запись была успешно добавлена",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("Пароль"),
     "password_must_be_more_that_eight_length":
         MessageLookupByLibrary.simpleMessage(
           "Пароль должен быть больше 8 символов",
         ),
     "register": MessageLookupByLibrary.simpleMessage("Зарегистрироваться"),
+    "the_list_of_elements_is_empty": MessageLookupByLibrary.simpleMessage(
+      "Список элементов пустой",
+    ),
     "to_save": MessageLookupByLibrary.simpleMessage("Сохранить"),
+    "todos_list": MessageLookupByLibrary.simpleMessage("Список TODOs"),
+    "update_todo": MessageLookupByLibrary.simpleMessage("Изменить ToDo"),
   };
 }

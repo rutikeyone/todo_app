@@ -33,4 +33,9 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<void> registerWithEmailAndPassword(String email, String password) {
     return _authDataSource.registerWithEmailAndPassword(email, password);
   }
+
+  @override
+  Future<void> signOut() {
+    return _authDataSource.signOut();
+  }
 }

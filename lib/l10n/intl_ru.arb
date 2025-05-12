@@ -14,5 +14,11 @@
   "enter_your_header": "Введите ваш заголовок",
   "description": "Описание",
   "enter_your_description": "Введите ваше описание",
-  "to_save": "Сохранить"
+  "to_save": "Сохранить",
+  "note_has_been_added_successful": "Запись была успешно добавлена",
+  "todos_list": "Список TODOs",
+  "the_list_of_elements_is_empty": "Список элементов пустой",
+  "update_todo": "Изменить ToDo",
+  "completed": "Завершен",
+  "data_has_been_updated_successfully": "Данные успешно изменены"
 }
